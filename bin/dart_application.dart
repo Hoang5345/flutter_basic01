@@ -1,5 +1,17 @@
-import 'package:dart_application/dart_application.dart' as dart_application;
+class SinhVien {
+  String? ten;
+  int? tuoi;
+  SinhVien(this.ten, this.tuoi);
+  void inRaten() {
+    print('tên: $ten-$tuoi');
+  }
+}
 
-void main(List<String> arguments) {
-  print('Hello world: ${dart_application.calculate()}!');
+void main() {
+  List<SinhVien> danhSach = [];
+  SinhVien svHoang = SinhVien('hoàng', 100);
+  danhSach.add(svHoang);
+  for (var sv in danhSach) {
+    sv.inRaten();
+  }
 }
